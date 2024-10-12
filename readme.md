@@ -15,6 +15,9 @@ This is a simple quiz application built with HTML, CSS, and JavaScript. The quiz
 - CSS
 - JavaScript
 
+## Demo
+![Demo Image](assets/Demo.png)
+
 ## Getting Started
 
 ### Prerequisites
