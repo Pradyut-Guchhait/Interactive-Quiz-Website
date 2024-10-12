@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+            transition: background 0.5s ease;
+        }
+        #quiz-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 350px;
+            max-width: 90%;
+        }
+        #quiz-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        #question {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: #1a237e;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        #choices {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        button {
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4fc3f7;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+        button:hover {
+            background-color: #03a9f4;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(3, 169, 244, 0.3);
+        }
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(3, 169, 244, 0.3);
+        }
+        #timer, #score {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #546e7a;
+            font-weight: 300;
+        }
+        #feedback {
+            font-weight: 600;
+            margin-top: 25px;
+            transition: all 0.5s ease;
+            height: 24px;
+        }
+        .correct {
+            color: #43a047;
+            animation: fadeInOut 1.5s ease;
+        }
+        .incorrect {
+            color: #e53935;
+            animation: fadeInOut 1.5s ease;
+        }
+        #restart-btn {
+            margin-top: 20px;
+            background-color: #ff9800;
+            display: none;
+        }
+        #restart-btn:hover {
+            background-color: #f57c00;
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; transform: translateY(-10px); }
+            50% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
